@@ -6,7 +6,7 @@ console.log(cards)
 
 const observer=new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
-       // console.group(entry)
+       //console.group(entry)
         entry.target.classList.toggle("show",entry.isIntersecting)
     })
 },{
@@ -104,11 +104,29 @@ function runInfinite()
 runInfinite()
 
 
-const skill=Array.from(document.getElementsByClassName("skill"))
-console.log(skill)
+// const skill=Array.from(document.getElementsByClassName("skill"))
+// console.log(skill)
 
-const observer1=new IntersectionObserver(entries, options);
+// const observer1=new IntersectionObserver(entries, options);
 
-skill.forEach((s)=>{
-  observer1.observe(s)
+// skill.forEach((s)=>{
+//   observer1.observe(s)
+// })
+
+
+const edu_cards=Array.from(document.getElementsByClassName("edu-card"))
+
+const observer2=new IntersectionObserver((entries)=>{
+     
+  entries.forEach((entry)=>{
+    // console.group(entry)
+     entry.target.classList.toggle("shows",entry.isIntersecting)
+ })
+    
+},{
+  
+})
+
+edu_cards.forEach((card)=>{
+  observer2.observe(card)
 })
